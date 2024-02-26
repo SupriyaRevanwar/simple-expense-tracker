@@ -1,0 +1,39 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Income</th>
+            <th>Grocery</th>
+            <th>Electronics</th>
+            <th>Bills</th>
+            <th>Cloths</th>
+            <th>Medicine</th>
+            <th>Others</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.user_name}}</td>
+            <td>{{user.income}}</td>
+            <td>{{user.grocery}}</td>
+            <td>{{user.electronics}}</td>
+            <td>{{user.bills}}</td>
+            <td>{{user.cloths}}</td>
+            <td>{{user.medicine}}</td>
+            <td>{{user.others}}</td>
+            <td class="text-cent"><button class="btn btn-xs" (click)="onSubmit(user.user_name)"> Edit</button>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteUser(user.user_name)" ><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+            
+          </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
